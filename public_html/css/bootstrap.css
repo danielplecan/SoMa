@@ -1590,7 +1590,7 @@ pre code {
     width: 91.66666667%;
   }
   .col-sm-10 {
-    width: 86.33333333%;
+    width: 83.33333333%;
   }
   .col-sm-9 {
     width: 75%;
@@ -1614,7 +1614,7 @@ pre code {
     width: 25%;
   }
   .col-sm-2 {
-    width: 13.66666667%;
+    width: 16.66666667%;
   }
   .col-sm-1 {
     width: 8.33333333%;
@@ -6452,70 +6452,4 @@ label {
 }
 .pager .disabled > a {
   border-color: #dddddd;
-}
-
-#left-side-widget {
-    width: 20%;
-    float: left;
-}
-
-#right-side-widget {
-    width: 20%;
-    float: right;
-}
-
-#front-content{
-    margin-top: 10%;
-    float: left;
-    width: 60%;
-}
-
-#logo{
-    margin: 0 auto;
-    width: 100px;
-    height: 100px;
-}
-
-#search{
-    margin-top: 30px;
-    margin: 0 auto;
-}
-
-#search-box .row .col-sm-2 {
-    padding-left: 0px;
-    padding-right: 15px;
-}
-
-#search-box .row .col-sm-10 {
-    padding-right: 3px;
-}
-
-#short-description {
-    margin-top: 30px;
-    text-align: center;
-}
-
-.clear{
-    clear: both;
-}
-
-footer{
-    background: none repeat scroll 0 0 #f2f2f2;
-    border-top: 1px solid #e4e4e4;
-    line-height: 40px;
-    min-width: 980px;
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    right: 0;
-}
-
-footer #credentials{
-    width: 50%;
-    float: left;
-}
-
-footer #navigation-links{
-    width: 50%;
-    float: left;
 }

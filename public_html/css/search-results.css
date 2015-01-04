@@ -1,0 +1,30 @@
+.container {
+    width: 100%;
+}
+
+.nav {
+    padding: 0 60px;
+}
+
+.container {
+    margin-top: 25px;
+}
+
+#searchResultsContent {
+    padding: 20px 60px;
+}
+
+.delimiter {
+    border-right: 1px solid #dddddd;
+}
+
+.col-sm-10 {
+
+
+}
+
+.col-sm-2 {
+
+
+
+}
