@@ -1590,7 +1590,7 @@ pre code {
     width: 91.66666667%;
   }
   .col-sm-10 {
-    width: 83.33333333%;
+    width: 86.33333333%;
   }
   .col-sm-9 {
     width: 75%;
@@ -1614,7 +1614,7 @@ pre code {
     width: 25%;
   }
   .col-sm-2 {
-    width: 16.66666667%;
+    width: 13.66666667%;
   }
   .col-sm-1 {
     width: 8.33333333%;
@@ -6477,21 +6477,20 @@ label {
 }
 
 #search{
-    width: 80%;
     margin-top: 30px;
     margin: 0 auto;
 }
 
-#search-box input{
-    width: 85%;
-    float: left;
+#search-box .row .col-sm-2 {
+    padding-left: 0px;
+    padding-right: 15px;
 }
 
-#search-box button{
-    margin-left: 3px;
+#search-box .row .col-sm-10 {
+    padding-right: 3px;
 }
 
-#short-description{
+#short-description {
     margin-top: 30px;
     text-align: center;
 }
