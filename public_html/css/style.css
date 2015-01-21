@@ -1,11 +1,24 @@
+.container {
+    width: 90%;
+}
+
 #left-side-widget {
     width: 20%;
+    height: 90%;
     float: left;
+}
+
+#left-side-widget .panel{
+    height: 100%;
 }
 
 #right-side-widget {
     width: 20%;
     float: right;
+}
+
+#right-side-widget .panel{
+    height: 100%;
 }
 
 #front-content{
@@ -15,14 +28,28 @@
 }
 
 #logo{
+    font-size: 50px;
+    font-weight: bold;
     margin: 0 auto;
-    width: 100px;
+    width: 140px;
     height: 100px;
+    text-shadow: 0 1px 5px #777;
+}
+
+.logo-first {
+    float: left;
+    color: #eee;
+}
+
+.logo-second {
+    float: left;
+    color: #ffcc66;
 }
 
 #search{
     margin-top: 30px;
     margin: 0 auto;
+    width: 75%;
 }
 
 #search-box {
@@ -55,11 +82,12 @@ footer{
     background: none repeat scroll 0 0 #f2f2f2;
     border-top: 1px solid #e4e4e4;
     line-height: 40px;
-    min-width: 980px;
-    bottom: 0;
-    left: 0;
+    width: 100%;
+}
+
+.footer-util{
     position: absolute;
-    right: 0;
+    bottom: 0;
 }
 
 footer #credentials{
@@ -83,3 +111,13 @@ footer #navigation-links{
 .navbar-left {
     width: 40%;
 }
+
+.navbar-collapse {
+    background: linear-gradient(90deg, #eee 10%, #ffcc66 90%) repeat scroll 0 0 #24c6dc;
+}
+
+.form-control:focus{
+    border-color: #ffcc66;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0) inset, 0 0 8px rgba(255, 158, 47, 0.5);
+}
+

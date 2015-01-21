@@ -18,13 +18,18 @@
     border-right: 1px solid #dddddd;
 }
 
-.col-sm-10 {
-
-
+h2{
+    font-size: 18px;
 }
 
-.col-sm-2 {
+.tab-content {
+    padding-top: 30px;
+}
 
+.more-down {
+    padding-top: 40px;
+}
 
-
+footer{
+    height: 40px;
 }

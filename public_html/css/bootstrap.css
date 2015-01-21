@@ -13,6 +13,7 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 body {
+  height: 100%;
   margin: 0;
 }
 article,
@@ -20,7 +21,6 @@ aside,
 details,
 figcaption,
 figure,
-footer,
 header,
 hgroup,
 main,
