@@ -1,23 +1,45 @@
-(function () {
+function twitterSearch() {
     OAuth.initialize('NUzclKmeAT45GJaDVan7gJI9s1g');
     
-    OAuth.popup('twitter', {cache: true}).done(function (twitter) {
-        twitter = OAuth.create('twitter');
-        console.log(twitter);
-        twitter.get("/1.1/search/tweets.json?q=%23superbowl&result_type=recent").done(function (data) {
-            
-            for(var i = 0; i < data.statuses.length; i++) {
-                twitter.get("/1.1/statuses/oembed.json?id=" + data.statuses[i].id + "&hide_media=true&hide_thread=true").done(function (data) {
-                    var tweet = $("<div class='panel-body' />");
-                    $(tweet).html(data.html);
-                    $("#tweets").append(tweet);
-                });
-            }
-            
-        }).fail(function (err) {
-            console.log(err);
+    var twitter = OAuth.create('twitter');
+    
+    if(twitter !== false) {
+        searchTweets(twitter, $("#focusedInput").val());
+    } else {
+        OAuth.popup('twitter', {cache: true})
+            .done(function (twitter) {
+                searchTweets(twitter, $("#focusedInput").val());
+            })
+            .fail(function () {
+                alert("Twitter authentication failed. Cannot provide results from this social media provider. Please try again.");
+            });
+    }
+}
+
+function searchTweets(twitter, keywords) {
+    keywords = keywords.replace(" ", " OR ");
+    keywords = encodeURI(keywords);
+    
+    twitter.get("/1.1/search/tweets.json?q=" + keywords + "&result_type=recent")
+            .done(function (data) {
+                renderTweets(twitter, data);
+            })
+            .fail(function () {
+                alert("Search for tweets has failed. Please try again.");
+            });
+}
+
+function renderTweets(twitter, data) {
+    $("#mashup-tweets-list").empty();
+    for (var i = 0; i < data.statuses.length; i++) {
+        var url = "https://api.twitter.com/1.1/statuses/oembed.json?id="
+                + data.statuses[i].id +
+                "&hide_media=true&hide_thread=true";
+        
+        twitter.get(url).done(function (data) {
+            var tweet = $("<li />");
+            $(tweet).html(data.html);
+            $("#mashup-tweets-list").append(tweet);
         });
-    }).fail(function (err) {
-        //todo when the OAuth flow failed
-    });
-})();
+    }
+}
