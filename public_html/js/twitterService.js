@@ -2,6 +2,7 @@
     OAuth.initialize('NUzclKmeAT45GJaDVan7gJI9s1g');
     
     OAuth.popup('twitter', {cache: true}).done(function (twitter) {
+        twitter = OAuth.create('twitter');
         console.log(twitter);
         twitter.get("/1.1/search/tweets.json?q=%23superbowl&result_type=recent").done(function (data) {
             
