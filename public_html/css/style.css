@@ -57,7 +57,7 @@
     margin-left: 0;
     margin-right: 0;
     padding-bottom: 0;
-    padding-top: 1px;
+    padding-top: 2px;
 }
 
 #search-box .row .col-sm-2 {
@@ -91,11 +91,13 @@ footer{
 }
 
 footer #credentials{
+    padding-left: 25px;
     width: 50%;
     float: left;
 }
 
 footer #navigation-links{
+    padding-left: 25px;
     width: 50%;
     float: left;
 }

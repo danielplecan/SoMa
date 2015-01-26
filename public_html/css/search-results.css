@@ -32,4 +32,111 @@ h2{
 
 footer{
     height: 40px;
+    bottom: 0px;
+}
+
+.youtube {
+    background-color: #000;
+    cursor: pointer;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 25px;
+}
+
+
+.youtube .thumb {
+    bottom: 0;
+    display: block;
+    height: auto;
+    left: 0;
+    margin: auto;
+    max-width: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    opacity: 0.8;
+    transition: all 200ms ease-out 0s;
+}
+
+.youtube .thumb:hover{
+    transform: scale(1,2);
+}
+
+.youtube .play{
+    background-image: url('../media/play.png');
+    height: 77px;
+    left: 50%;
+    margin-left: -38px;
+    margin-top: -38px;
+    opacity: 0.8;
+    position: absolute;
+    top: 50%;
+    width: 77px;
+}
+
+#mashup-videos-panel .youtube{
+    animation: fadein 1s;
+    -moz-animation: fadein 1s; /* Firefox */
+    -webkit-animation: fadein 1s; /* Safari and Chrome */
+    -o-animation: fadein 1s; /* Opera */
+}
+
+#mashup-videos-youtube-tab .youtube{
+    animation: fadein 1s;
+    -moz-animation: fadein 1s; /* Firefox */
+    -webkit-animation: fadein 1s; /* Safari and Chrome */
+    -o-animation: fadein 1s; /* Opera */
+}
+
+.mashup-images-panel-element{
+    animation: fadein 1s;
+    -moz-animation: fadein 1s; /* Firefox */
+    -webkit-animation: fadein 1s; /* Safari and Chrome */
+    -o-animation: fadein 1s; /* Opera */
+    margin-right: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+    border: solid 1px #EFEFEF;
+}
+
+a:hover img.mashup-images-panel-element {
+    border: solid 1px #CCC;
+    -moz-box-shadow: 1px 1px 5px #999;
+    -webkit-box-shadow: 1px 1px 5px #999;
+    box-shadow: 1px 1px 5px #999;
+}
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
 }
