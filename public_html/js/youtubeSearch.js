@@ -33,7 +33,15 @@ for (var i=0; i<videos.length; i++) {
 
         // The height and width of the iFrame should be the same as parent
         iframe.style.width  = this.style.width;
-        iframe.style.height = this.style.height;
+        iframe.style.height = this.style.height
+        iframe.style.borderColor= "#eee #ddd #bbb";
+        iframe.style.borderImage = "none";
+        iframe.style.borderWidth = "1px";
+        iframe.style.boxShadow = "1px 1px 5px #999";
+        iframe.style.cursor = "pointer";
+        iframe.style.marginBottom = "25px";
+        iframe.style.overflow = "hidden";
+        iframe.style.position = "relative";
 
         // Replace the YouTube thumbnail with YouTube HTML5 Player
         this.parentNode.replaceChild(iframe, this);
