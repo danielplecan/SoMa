@@ -28,8 +28,17 @@ function mapsSearch(keywords) {
 
 function callback(results, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
-        for (var i = 0; i < results.length; i++) {
-            createMarker(results[i]);
+        if (results.length > 0) {
+            map = new google.maps.Map(document.getElementById('map-canvas'), {
+                center: results[0].geometry.location,
+                zoom: 15
+            });
+            
+            createMarker(results[0]);
+
+            for (var i = 1; i < results.length; i++) {
+                createMarker(results[i]);
+            }
         }
     }
 }
@@ -39,7 +48,7 @@ function createMarker(place) {
         map: map,
         position: place.geometry.location
     });
-
+    
     google.maps.event.addListener(marker, 'click', function () {
         infowindow.setContent(place.name);
         infowindow.open(map, this);
