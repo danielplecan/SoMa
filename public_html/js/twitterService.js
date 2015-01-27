@@ -43,3 +43,7 @@ function renderTweets(twitter, data) {
         });
     }
 }
+
+function googleMapsSearch() {
+    document.getElementById('mashup-map').contentWindow.mapsSearch($("#focusedInput").val());
+}
