@@ -66,8 +66,8 @@ function getResponse(response) {
     else{
 
     videoTitle = $("<h3>"+JSON.parse(Videos).items[index].snippet.title +"</h3>");
-    video = $("<div class='youtube' id='" +  JSON.parse(Videos).items[index].id.videoId  + "' style='width: 100%; height: 150px;'></div>");
-    tabbedVideo = $("<div class='youtube' id='" +  JSON.parse(Videos).items[index].id.videoId  + "' style='width: 40%; height: 225px; '></div>");
+    video = $("<div itemprop='video' class='youtube' id='" +  JSON.parse(Videos).items[index].id.videoId  + "' style='width: 100%; height: 150px;'></div>");
+    tabbedVideo = $("<div itemprop='video' class='youtube' id='" +  JSON.parse(Videos).items[index].id.videoId  + "' style='width: 40%; height: 225px; '></div>");
     $("#mashup-videos-panel").append(video);
     $("#mashup-videos-panel-tab-youtube").append(videoTitle).append(tabbedVideo);
     }

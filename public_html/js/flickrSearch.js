@@ -35,8 +35,8 @@ function flickrSearch(query) {
                 var photoStringTab;
                 */
 
-                var imgContTab = '<div class="tab-images-panel-element" style="background: url(' + mashupPhotoURL + ');"><div class="image-info"><p class="top"><a class="title" href="' + PhotoURL + '">' + rPhoto.title + '</p></div></div>';
-                var imgContMashup = '<div class="mashup-images-panel-element" style="background: url(' + mashupPhotoURL + ');"><div class="image-info"><p class="top"><a class="title" href="' + PhotoURL + '">' + rPhoto.title + '</p></div></div>';
+                var imgContTab = '<div itemprop="image" class="tab-images-panel-element" style="background: url(' + mashupPhotoURL + ');"><div class="image-info"><p class="top"><a class="title" href="' + PhotoURL + '">' + rPhoto.title + '</p></div></div>';
+                var imgContMashup = '<div itemprop="image" class="mashup-images-panel-element" style="background: url(' + mashupPhotoURL + ');"><div class="image-info"><p class="top"><a class="title" href="' + PhotoURL + '">' + rPhoto.title + '</p></div></div>';
 
                 if(i < showOnPageMashup ){
 
