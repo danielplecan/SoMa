@@ -1,14 +1,14 @@
-function twitterSearch() {
+function twitterSearch(query) {
     OAuth.initialize('NUzclKmeAT45GJaDVan7gJI9s1g');
     
     var twitter = OAuth.create('twitter');
     
     if(twitter !== false) {
-        searchTweets(twitter, $("#focusedInput").val());
+        searchTweets(twitter, query);
     } else {
         OAuth.popup('twitter', {cache: true})
             .done(function (twitter) {
-                searchTweets(twitter, $("#focusedInput").val());
+                searchTweets(twitter, query);
             })
             .fail(function () {
                 alert("Twitter authentication failed. Cannot provide results from this social media provider. Please try again.");
@@ -30,7 +30,7 @@ function searchTweets(twitter, keywords) {
 }
 
 function renderTweets(twitter, data) {
-    $("#mashup-tweets-list").empty();
+//    $("#mashup-tweets-list").empty();
     for (var i = 0; i < data.statuses.length; i++) {
         var url = "https://api.twitter.com/1.1/statuses/oembed.json?id="
                 + data.statuses[i].id +
@@ -44,6 +44,6 @@ function renderTweets(twitter, data) {
     }
 }
 
-function googleMapsSearch() {
-    document.getElementById('mashup-map').contentWindow.mapsSearch($("#focusedInput").val());
+function googleMapsSearch(query) {
+    document.getElementById('mashup-map').contentWindow.mapsSearch(query);
 }

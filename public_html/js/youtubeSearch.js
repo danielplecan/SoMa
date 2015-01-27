@@ -82,14 +82,15 @@ function onClientLoad() {
 // Called automatically when YouTube API interface is loaded ( upper )
 function onYouTubeApiLoad() {
     gapi.client.setApiKey('AIzaSyCR5In4DZaTP6IEZQ0r1JceuvluJRzQNLE');
+    search(youtubeSearch);
 }
 
-function youtubeSearch() {
+function youtubeSearch(query) {
     // Use the JavaScript client library to create a search.list() API call.
     var request = gapi.client.youtube.search.list({
         part: 'snippet',
         type: 'video',
-        q: document.getElementById("focusedInput").value
+        q: query
     });
     
     // Send the request to the API server,
