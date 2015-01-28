@@ -30,7 +30,6 @@ function searchTweets(twitter, keywords) {
 }
 
 function renderTweets(twitter, data) {
-//    $("#mashup-tweets-list").empty();
     for (var i = 0; i < data.statuses.length; i++) {
         var url = "https://api.twitter.com/1.1/statuses/oembed.json?id="
                 + data.statuses[i].id +
@@ -40,10 +39,17 @@ function renderTweets(twitter, data) {
             var tweet = $("<li />");
             $(tweet).html(data.html);
             $("#mashup-tweets-list").append(tweet);
+            
+            var tweet = $("<li />");
+            $(tweet).html(data.html);
+            $("#mashup-twitter-stories-list").append(tweet);
         });
     }
 }
 
 function googleMapsSearch(query) {
     document.getElementById('mashup-map').contentWindow.mapsSearch(query);
+    document.getElementById('stories-map').contentWindow.mapsSearch(query);
+    document.getElementById('images-map').contentWindow.mapsSearch(query);
+    document.getElementById('videos-map').contentWindow.mapsSearch(query);
 }

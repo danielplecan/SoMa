@@ -56,9 +56,6 @@ function getResponse(response) {
 
     Videos = responseString;
 
-    $("#mashup-videos-panel").html("");
-    $("mashup-videos-panel-tab-youtube").html("");
-
     for(index=0; index< 5; index++){
     if(JSON.parse(Videos).items[index] === undefined){
         continue;
@@ -88,6 +85,8 @@ function onYouTubeApiLoad() {
 
 function youtubeSearch(query) {
     // Use the JavaScript client library to create a search.list() API call.
+    gapi.client.setApiKey('AIzaSyCR5In4DZaTP6IEZQ0r1JceuvluJRzQNLE');
+    
     var request = gapi.client.youtube.search.list({
         part: 'snippet',
         type: 'video',

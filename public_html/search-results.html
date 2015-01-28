@@ -50,7 +50,7 @@
             </div>
         </div>
 
-        <div class="container"itemscope itemtype="http://schema.org/SearchResultsPage">
+        <div class="container" itemscope itemtype="http://schema.org/SearchResultsPage">
 
             <ul class="nav nav-tabs" itemprop="breadcrumb">
                 <li class="active"><a aria-expanded="true" href="#mashup" data-toggle="tab">Mashup</a></li>
@@ -110,7 +110,7 @@
 
                         </div>
                     </div>
-                </div item>
+                </div>
 
                 <div class="tab-pane fade" id="stories" itemprop="genre">
 
@@ -119,51 +119,51 @@
 
                             <div class="col-sm-9 delimiter">
 
-                                    <div class="col-sm-6 delimiter">
+                                <div class="col-sm-6 delimiter">
 
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading">
-                                                <div class="row">
-                                                    <div class="col-sm-10">
-                                                        <h2>Google+</h2>
-                                                    </div>
-                                                    <div class="col-sm-2">
-                                                        <img src="media/googlePlus.png" alt="Google+" width="45px" height="45px" style="opacity: 0.8;"/>
-                                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <div class="row">
+                                                <div class="col-sm-10">
+                                                    <h2>Google+</h2>
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <img src="media/googlePlus.png" alt="Google+" width="45px" height="45px" style="opacity: 0.8;"/>
                                                 </div>
                                             </div>
-                                            <div class="panel-body" id="tabStoriesGooglePlus">
-
-                                            </div>
+                                        </div>
+                                        <div class="panel-body" id="tabStoriesGooglePlus">
+                                            <ul id="mashup-google-stories-list"></ul>
                                         </div>
                                     </div>
+                                </div>
 
-                                    <div class="col-sm-6 ">
+                                <div class="col-sm-6 ">
 
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading">
-                                                <div class="row">
-                                                    <div class="col-sm-10">
-                                                        <h2>Twitter</h2>
-                                                    </div>
-                                                    <div class="col-sm-2">
-                                                        <img src="media/twitter.png" alt="Twitter" width="45px" height="45px" style="opacity: 0.8;"/>
-                                                    </div>
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <div class="row">
+                                                <div class="col-sm-10">
+                                                    <h2>Twitter</h2>
+                                                </div>
+                                                <div class="col-sm-2">
+                                                    <img src="media/twitter.png" alt="Twitter" width="45px" height="45px" style="opacity: 0.8;"/>
                                                 </div>
                                             </div>
-                                            <div class="panel-body" id="tabStoriesTwitter">
-
-                                            </div>
                                         </div>
-
+                                        <div class="panel-body" id="tabStoriesTwitter">
+                                            <ul id="mashup-twitter-stories-list"></ul>
+                                        </div>
                                     </div>
 
                                 </div>
 
+                            </div>
+
                             <div class="col-sm-3">
 
                                 <h4>Location</h4>
-                                <img src="media/dummy-map.gif" alt="Map" width="350" height="300" />
+                                <iframe id="stories-map" src="maps.html"></iframe>
 
                             </div>
                         </div>
@@ -175,18 +175,18 @@
                         <div class="row">
                             <div class="col-sm-9 delimiter">
 
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading">
-                                            <div class="row">
-                                                <div class="col-sm-11">
-                                                    <h2>Flickr</h2>
-                                                </div>
-                                                <div class="col-sm-1">
-                                                    <img src="media/flickr.png" alt="Flickr" width="45px" height="45px" style="opacity: 0.8;"/>
-                                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <div class="row">
+                                            <div class="col-sm-11">
+                                                <h2>Flickr</h2>
+                                            </div>
+                                            <div class="col-sm-1">
+                                                <img src="media/flickr.png" alt="Flickr" width="45px" height="45px" style="opacity: 0.8;"/>
                                             </div>
                                         </div>
-                                        <div class="panel-body" id="mashup-images-panel-tab-flickr">
+                                    </div>
+                                    <div class="panel-body" id="mashup-images-panel-tab-flickr">
                                     </div>
 
                                 </div>
@@ -195,7 +195,7 @@
                             <div class="col-sm-3">
 
                                 <h4>Location</h4>
-                                <img src="media/dummy-map.gif" alt="Map" width="350" height="300" />
+                                <iframe id="images-map" src="maps.html"></iframe>>
 
                             </div>
                         </div>
@@ -208,57 +208,54 @@
                         <div class="row">
                             <div class="col-sm-9 delimiter">
 
-                                        <div class="panel panel-default">
-                                            <div class="panel-heading">
-                                                <div class="row">
-                                                <div class="col-sm-11">
-                                                    <h2>YouTube</h2>
-                                                </div>
-                                                    <div class="col-sm-1">
-                                                    <img src="media/youtube.png" alt="Youtube" width="45px" height="45px" style="opacity: 0.8;"/>
-                                                    </div>
-                                                </div>
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <div class="row">
+                                            <div class="col-sm-11">
+                                                <h2>YouTube</h2>
                                             </div>
-                                            <div class="panel-body" id="mashup-videos-panel-tab-youtube">
-
+                                            <div class="col-sm-1">
+                                                <img src="media/youtube.png" alt="Youtube" width="45px" height="45px" style="opacity: 0.8;"/>
                                             </div>
                                         </div>
+                                    </div>
+                                    <div class="panel-body" id="mashup-videos-panel-tab-youtube">
+
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="col-sm-3">
 
                                 <h4>Location</h4>
-                                <img src="media/dummy-map.gif" alt="Map" width="350" height="300" />
+                                <iframe id="videos-map" src="maps.html"></iframe>
 
                             </div>
                         </div>
 
-                        </div>
                     </div>
-
                 </div>
 
             </div>
 
         </div>
-
         <div class="clear"></div>
 
         <!--
-
+    
         <footer>
-
+    
             <div id="credentials">
                 <a href="#">About</a>
             </div>
-
+    
             <div id="navigation-links">
                 <a href="index.html">Home</a>
                 <a href="#top">Top</a>
             </div>
-
+    
         </footer>
-
+    
         -->
 
         <script src="https://labnol.googlecode.com/files/youtube.js"></script>
